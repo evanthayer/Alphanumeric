@@ -42,7 +42,7 @@ void DisplayCharacter(int charNum) {
 
   // Iterate through font map bytes, extract bits, and write to screen memory
   for (int i = 0; i < 5; i++) {
-    for (int j = 0; j < 8; j++) {
+    for (int j = 0; j < 7; j++) {
       screenMemory[j][i] = ((charByteArray[i] & (1 << j)) ? 0 : 1);
     }
   }
