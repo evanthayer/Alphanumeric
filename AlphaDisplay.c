@@ -25,7 +25,7 @@ void setup() {
 void loop() {
 
   // Iterate through font.h character array
-  for (int i = 65; i < 90; i++) {
+  for (int i = 0; i < 255; i++) {
     for (int j = 0; j < 20; j++) {
       DisplayCharacter(i);
     }
@@ -46,7 +46,10 @@ void DisplayCharacter(int charNum) {
       screenMemory[j][i] = ((charByteArray[i] & (1 << j)) ? 0 : 1);
     }
   }
+  WriteScreen();
+}
 
+void WriteScreen() {
   // Iterate through screen memory rows
   for (int i = 0; i < 7; i++) {
 
