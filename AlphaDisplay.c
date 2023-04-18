@@ -26,7 +26,6 @@ void loop() {
   // Iterate through font.h character array
   for (int i = 65; i < 90; i++) {
     for (int j = 0; j < 20; j++) {
-      delay(2);
       DisplayCharacter(i);
     }
   }
