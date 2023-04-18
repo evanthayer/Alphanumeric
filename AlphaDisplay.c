@@ -9,12 +9,13 @@ int screenMemory[7][5] = { 0 };
 
 void setup() {
 
-  // Set GPIO pins to output mode and pull to ground
+  // Set GPIO pins to output mode and pull anodes to GND
   for (int i = 0; i < 7; i++) {
     pinMode(RowPins[i], OUTPUT);
     digitalWrite(RowPins[i], LOW);
   }
 
+  // Set GPIO pins to output mode and pull cathodes to 5V0
   for (int i = 0; i < 5; i++) {
     pinMode(ColumnPins[i], OUTPUT);
     digitalWrite(ColumnPins[i], HIGH);
